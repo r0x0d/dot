@@ -1,0 +1,22 @@
+#!/bin/bash
+
+VIM_PLUGINS_PATH="$HOME/.vim/pack/plugins/start"
+
+PLUGINS=(
+    junegunn/fzf.vim 
+    preservim/tagbar 
+    vim-syntastic/syntastic
+    mg979/vim-visual-multi
+    scrooloose/nerdtree
+)
+
+mkdir -p "$VIM_PLUGINS_PATH"
+
+# Clone all plugins
+for plugin in "${PLUGINS[@]}"; do
+    IFS='/' read -ra splitted_plugin <<< "$plugin"
+    git clone https://github.com/"$plugin" "$VIM_PLUGINS_PATH"/"${splitted_plugin[1]}" 
+done
+
+# Symlink vim configuration file
+ln -s "$PWD/.vimrc" "$HOME/.vimrc"

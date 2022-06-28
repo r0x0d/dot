@@ -50,32 +50,35 @@ if has('syntax') && has('eval')
   packadd! matchit
 endif
 
-if system('uname -s') == "Darwin\n"
-  set clipboard=unnamed "OSX
-else
-  set clipboard=unnamedplus "Linux
-endif
-
 set number
 set tw=792034
-set textwidth=80
 set cc=80
 set nobackup
 set noswapfile
 set noundofile
 set background=dark
+set clipboard=unnamedplus
 set expandtab
 set tabstop=4
 set shiftwidth=4
 set mouse=a
-set paste
-set autoindent
-set smartindent
-set smarttab
-set expandtab
-filetype plugin indent on
 
 map <TAB> :bnext<CR>
 map <S-TAB> :bprevious<CR>
 
-autocmd vimenter * ++nested colorscheme gruvbox8_hard
+" ==== custom macros ====
+" Delete a function call. example:  floor(int(var))
+"         press when your cursor is       ^        results in:
+"                                   floor(var)
+map <C-H> ebdw%x<C-O>x
+nnoremap gp `[v`]
+
+" Syntastic
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
