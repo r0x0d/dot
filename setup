@@ -8,6 +8,9 @@ PLUGINS=(
     vim-syntastic/syntastic
     mg979/vim-visual-multi
     scrooloose/nerdtree
+    tpope/vim-fugitive
+    vim-airline/vim-airline
+    jmcantrell/vim-virtualenv
 )
 
 mkdir -p "$VIM_PLUGINS_PATH"
