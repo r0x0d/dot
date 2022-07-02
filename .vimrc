@@ -50,19 +50,21 @@ if has('syntax') && has('eval')
   packadd! matchit
 endif
 
-set number
+set relativenumber
 set tw=792034
 set cc=80
 set nobackup
 set noswapfile
 set noundofile
 set background=dark
-set clipboard=unnamedplus
+set clipboard^=unnamed,unnamedplus
 set expandtab
 set tabstop=4
 set shiftwidth=4
 set mouse=a
-colorscheme desert
+set ttyfast
+set lazyredraw
+colorscheme sitruuna
 
 map <TAB> :bnext<CR>
 map <S-TAB> :bprevious<CR>
