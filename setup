@@ -7,10 +7,9 @@ PLUGINS=(
     preservim/tagbar 
     vim-syntastic/syntastic
     mg979/vim-visual-multi
-    scrooloose/nerdtree
     tpope/vim-fugitive
-    vim-airline/vim-airline
     jmcantrell/vim-virtualenv
+    eemed/sitruuna.vim
 )
 
 mkdir -p "$VIM_PLUGINS_PATH"
