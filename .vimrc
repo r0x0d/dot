@@ -76,12 +76,6 @@ map <S-TAB> :bprevious<CR>
 map <C-H> ebdw%x<C-O>x
 nnoremap gp `[v`]
 
-" Syntastic
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
+" ALE
+let b:ale_linters = ['flake8', ',mypy']
+let b:ale_fixers = ['black']
