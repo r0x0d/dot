@@ -50,7 +50,7 @@ if has('syntax') && has('eval')
   packadd! matchit
 endif
 
-set relativenumber
+set number
 set tw=792034
 set cc=80
 set nobackup
@@ -64,7 +64,6 @@ set shiftwidth=4
 set mouse=a
 set ttyfast
 set lazyredraw
-colorscheme sitruuna
 
 map <TAB> :bnext<CR>
 map <S-TAB> :bprevious<CR>
@@ -77,5 +76,5 @@ map <C-H> ebdw%x<C-O>x
 nnoremap gp `[v`]
 
 " ALE
-let b:ale_linters = ['flake8', ',mypy']
+let b:ale_linters = ['flake8']
 let b:ale_fixers = ['black']
