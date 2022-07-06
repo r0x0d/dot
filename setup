@@ -11,8 +11,8 @@ PLUGINS=(
     dense-analysis/ale
     tpope/vim-rhubarb
     shumphrey/fugitive-gitlab.vim
-    FrostyX/vim-fugitive-pagure
-    flazz/vim-colorschemes
+    FrostyX/vim-fugitive-pagure 
+    eemed/sitruuna.vim
 )
 
 mkdir -p "$VIM_PLUGINS_PATH"

@@ -64,7 +64,7 @@ set shiftwidth=4
 set mouse=a
 set ttyfast
 set lazyredraw
-colorscheme pablo 
+colorscheme sitruuna
 
 map <TAB> :bnext<CR>
 map <S-TAB> :bprevious<CR>
