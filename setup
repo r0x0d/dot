@@ -13,6 +13,7 @@ PLUGINS=(
     shumphrey/fugitive-gitlab.vim
     FrostyX/vim-fugitive-pagure 
     eemed/sitruuna.vim
+    psf/black
 )
 
 mkdir -p "$VIM_PLUGINS_PATH"
