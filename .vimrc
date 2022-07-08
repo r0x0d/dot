@@ -50,6 +50,8 @@ if has('syntax') && has('eval')
   packadd! matchit
 endif
 
+set t_Co=256
+set termguicolors
 set number
 set tw=792034
 set cc=80
@@ -63,8 +65,6 @@ set tabstop=4
 set shiftwidth=4
 set mouse=a
 set ttyfast
-set lazyredraw
-colorscheme sitruuna
 
 map <TAB> :bnext<CR>
 map <S-TAB> :bprevious<CR>
