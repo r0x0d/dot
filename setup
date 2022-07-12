@@ -3,16 +3,17 @@
 VIM_PLUGINS_PATH="$HOME/.vim/pack/plugins/start"
 
 PLUGINS=(
-    junegunn/fzf.vim 
-    preservim/tagbar 
+    junegunn/fzf.vim
+    preservim/tagbar
     mg979/vim-visual-multi
     tpope/vim-fugitive
     jmcantrell/vim-virtualenv
-    dense-analysis/ale
     tpope/vim-rhubarb
     shumphrey/fugitive-gitlab.vim
-    FrostyX/vim-fugitive-pagure 
+    FrostyX/vim-fugitive-pagure
     psf/black
+    jvirtanen/vim-hcl
+    vim-syntastic/syntastic
 )
 
 mkdir -p "$VIM_PLUGINS_PATH"
@@ -20,7 +21,7 @@ mkdir -p "$VIM_PLUGINS_PATH"
 # Clone all plugins
 for plugin in "${PLUGINS[@]}"; do
     IFS='/' read -ra splitted_plugin <<< "$plugin"
-    git clone https://github.com/"$plugin" "$VIM_PLUGINS_PATH"/"${splitted_plugin[1]}" 
+    git clone https://github.com/"$plugin" "$VIM_PLUGINS_PATH"/"${splitted_plugin[1]}"
 done
 
 # Symlink vim configuration file
