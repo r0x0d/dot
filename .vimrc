@@ -75,7 +75,3 @@ map <S-TAB> :bprevious<CR>
 "                                   floor(var)
 map <C-H> ebdw%x<C-O>x
 nnoremap gp `[v`]
-
-" ALE
-let b:ale_linters = ['flake8']
-let b:ale_fixers = ['black']
