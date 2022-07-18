@@ -75,3 +75,29 @@ map <S-TAB> :bprevious<CR>
 "                                   floor(var)
 map <C-H> ebdw%x<C-O>x
 nnoremap gp `[v`]
+
+" ALE
+let g:ale_max_signs = 0
+let g:ale_fix_on_save = 1
+let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
+let b:ale_fixers = {
+\    '*': ['remove_trailing_lines', 'trim_whitespace'],
+\    'python': ['black'],
+\}
+let b:ale_linters = {
+\    'python': ['flake8'],
+\}
+let g:ale_open_list = 'on_save'
+let g:ale_set_loclist = 1
+let g:ale_list_window_size = 5
+
+" Close window when buffer closes
+augroup CloseLoclistWindowGroup
+  autocmd!
+  autocmd QuitPre * if empty(&buftype) | lclose | endif
+augroup END
+
+" UltiSnips
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>" 

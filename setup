@@ -4,16 +4,15 @@ VIM_PLUGINS_PATH="$HOME/.vim/pack/plugins/start"
 
 PLUGINS=(
     junegunn/fzf.vim
-    preservim/tagbar
-    mg979/vim-visual-multi
     tpope/vim-fugitive
-    jmcantrell/vim-virtualenv
     tpope/vim-rhubarb
     shumphrey/fugitive-gitlab.vim
     FrostyX/vim-fugitive-pagure
     psf/black
     jvirtanen/vim-hcl
-    vim-syntastic/syntastic
+    dense-analysis/ale
+    honza/vim-snippets
+    rust-lang/rust.vim
 )
 
 mkdir -p "$VIM_PLUGINS_PATH"
