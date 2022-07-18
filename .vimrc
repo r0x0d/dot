@@ -66,6 +66,7 @@ set shiftwidth=4
 set mouse=a
 set ttyfast
 
+map <F12> :ALEToggle<CR>
 map <TAB> :bnext<CR>
 map <S-TAB> :bprevious<CR>
 
@@ -78,7 +79,7 @@ nnoremap gp `[v`]
 
 " ALE
 let g:ale_max_signs = 0
-let g:ale_fix_on_save = 1
+let g:ale_fix_on_save = 0
 let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
 let b:ale_fixers = {
 \    '*': ['remove_trailing_lines', 'trim_whitespace'],
@@ -89,7 +90,7 @@ let b:ale_linters = {
 \}
 let g:ale_open_list = 'on_save'
 let g:ale_set_loclist = 1
-let g:ale_list_window_size = 5
+let g:ale_list_window_size = 3
 
 " Close window when buffer closes
 augroup CloseLoclistWindowGroup
