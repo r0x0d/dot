@@ -9,10 +9,9 @@ PLUGINS=(
     shumphrey/fugitive-gitlab.vim
     FrostyX/vim-fugitive-pagure
     psf/black
-    jvirtanen/vim-hcl
     dense-analysis/ale
-    honza/vim-snippets
     rust-lang/rust.vim
+    sheerun/vim-polyglot
 )
 
 mkdir -p "$VIM_PLUGINS_PATH"
